@@ -9,7 +9,7 @@ describe('Verify Portfolio Page', () => {
     let pageUrl = 'https://luisp-coder.github.io/PortfolioV2/';
     let resumeUrl = 'https://docs.google.com/document/d/1_15oygLPrbS8EtacTA5YWfIaXcxlOAZd/edit';
     let linkedInUrl = 'https://www.linkedin.com/in/luis-perez-6a9338184/';
-    let playstationUrl = 'https://github.com/LuisP-coder';
+    let gitHubUrl = 'https://github.com/LuisP-coder';
 
     // Mock functions
     // beforeEach(async () => {
@@ -24,7 +24,7 @@ describe('Verify Portfolio Page', () => {
     it('Open Portfolio page', async() => {
         // allure.owner(owner);
         // allure.startStep('Open page and verify url');
-        browser.url(pageUrl);
+        await browser.url(pageUrl);
         await browser.pause(10000);
     });
 
@@ -100,6 +100,6 @@ describe('Verify Portfolio Page', () => {
 
         // allure.startStep('Verify GitHub Link');
         await PortfolioV2.socials(2).click();
-        await browser.toHaveUrlContaining(playstationUrl);
+        await browser.toHaveUrlContaining(gitHubUrl);
     });
 });
