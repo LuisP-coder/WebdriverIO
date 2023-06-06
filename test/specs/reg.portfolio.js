@@ -12,21 +12,10 @@ describe('Verify Portfolio Page', () => {
     let gitHubUrl = 'https://github.com/LuisP-coder';
 
     // Mock functions
-    // beforeEach(async () => {
-    //     // allure.owner(owner);
-    
-    // }); 
-
-    // afterEach(async () => {
-    //     // allure.owner(owner);
-    // });
-
-    it('Open Portfolio page', async() => {
+    before(async () => {
         // allure.owner(owner);
-        // allure.startStep('Open page and verify url');
         await browser.url(pageUrl);
-        await browser.pause(10000);
-    });
+    }); 
 
     it('Verify Home page text and image', async() => {
         // allure.owner(owner);
