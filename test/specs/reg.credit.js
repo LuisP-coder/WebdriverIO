@@ -15,7 +15,7 @@ describe('Verify Card Page is okay', () => {
 
     it('Verify Chip and signal image are shown', async() => {
         // Checking if Chip Icon is shown
-        await expect(Card.chipIcon).isisplayed();
+        await expect(Card.chipIcon).isplayed();
 
         // Checking if wifi icon is shown
         await expect(Card.wifiIcon).isDisplayed();
