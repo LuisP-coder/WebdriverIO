@@ -11,7 +11,6 @@ describe('Verify Portfolio Page', () => {
     let linkedInUrl = 'https://www.linkedin.com/in/luis-perez-6a9338184/';
     let gitHubUrl = 'https://github.com/LuisP-coder';
 
-    // Mock functions
     before(async () => {
         // allure.owner(owner);
         await browser.url(pageUrl);
