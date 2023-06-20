@@ -7,9 +7,8 @@ describe('Verify GreenUp Mock Page', () => {
 
     it('Verify Navbar is displayed and has its content', async() => {
         await expect(Green.nav).isDisplayed();
-
         await expect(Green.navTitle).toHaveText('Green Up');
-        // Nav Items
+        // Nav Bar Items
         await expect(Green.navLink(0)).toHaveText('About');
         await expect(Green.navLink(1)).toHaveText('Contact');
         await expect(Green.navLink(2)).toHaveText('Find Us');
@@ -17,9 +16,7 @@ describe('Verify GreenUp Mock Page', () => {
 
     it('Verify Home section contents', async() => {
         await expect(Green.home).isDisplayed();
-
         await expect(Green.slide).isDisplayed();
-
         // Clicks on next and previous button
         await expect(Green.prevBtn).click();
         await browser.pause(3000);
