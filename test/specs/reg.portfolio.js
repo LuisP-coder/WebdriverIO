@@ -17,12 +17,12 @@ describe('Verify Portfolio Page', () => {
     }); 
 
     it('Verify Home page text and image', async() => {
+        // Alure Mock use
         // allure.owner(owner);
         // allure.startStep('Verify front page text', true);
         await expect(PortfolioV2.homeIntro).toHaveText(
             'A Quality Assurance Engineer and an aspiring Web Developer based in SF Bay Area.'
         );
-
         // allure.startStep('Verify Image is displayed', true); 
         await PortfolioV2.memoji.isDisplayed();
     });
@@ -30,7 +30,6 @@ describe('Verify Portfolio Page', () => {
     it('Verify Project Card and text inside', async() => {
         // allure.owner(owner);
         // allure.startStep('Verify Cards are displayed', true);
-
         for(let i = 0; i < 4; i++) {
             await expect(PortfolioV2.projectCard([i])).isDisplayed();
         }
@@ -75,7 +74,6 @@ describe('Verify Portfolio Page', () => {
         await browser.toHaveUrlContaining(resumeUrl);
         await browser.closeTab();
         await browser.switchTab([0]);
-
         // allure.startStep('Verify picture is shown');
         await PortfolioV2.selfie.isDisplayed();
     });
