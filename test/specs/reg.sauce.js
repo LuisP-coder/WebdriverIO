@@ -46,7 +46,7 @@ describe('Automate SauceLab Page', async() => {
         await expect(Sauce.addToCart(2)).click();
         await expect(Sauce.cart).click();
 
-        // remove items
+        // remove items from cart
         await expect(Sauce.removeCart(1)).click();
     });
 });
