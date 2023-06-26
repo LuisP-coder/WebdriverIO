@@ -34,7 +34,7 @@ describe('Automate SauceLab Page', async() => {
         );
         await expect(Sauce.errorClear).click();
 
-        // success 
+        // User logs in with correct username and password
         await expect(Sauce.userInput).click();
         await expect(Sauce.userInput).setValue('standard_user');
         await expect(Sauce.passInput).click();
