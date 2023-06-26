@@ -80,7 +80,7 @@ describe('Verify first porfolio page', async() => {
         await browser.closeTab();
         await browser.switchTab([0]);
 
-        await expect(FirstPort.links(w)).click();
+        await expect(FirstPort.links(2)).click();
         await browser.toHaveUrlContaining(linkedinUrl);
         await browser.pause(3000);
         await browser.closeTab();
