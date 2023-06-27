@@ -70,12 +70,15 @@ describe('Automate SauceLab Page', async() => {
     });
 
     it('Verify items and payment info are correct', async() => {
+        // Info for items
         await expect(Sauce.itemName(1)).toHaveText('Sauce Labs Bike Light');
         await expect(Sauce.itemName(2)).toHaveText('Sauce Labs Backpack');
 
+        // Verifies payment info
         await expect(Sauce.cardShip(1)).toHaveText('SauceCard #31337');
         await expect(Sauce.cardShip(2)).toHaveText('Free Pony Express Delivery!');
 
+        // Checks total for items
         await expect(Sauce.subTotal).toHaveText('Item Total: $39.98');
         await expect(Sauce.taxes).toHaveText('Tax: $3.20');
 
