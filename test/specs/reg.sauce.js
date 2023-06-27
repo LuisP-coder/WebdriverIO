@@ -51,13 +51,15 @@ describe('Automate SauceLab Page', async() => {
         await expect(Sauce.addToCart(3)).click();
         await expect(Sauce.cart).click();
 
-        // Remove item from cart
+        // Remove one item from cart
         await expect(Sauce.removeCart(1)).click();
+
+        // Goes to add info page
+        await expect(Sauce.checkout).click();
     });
 
     it('Add info and checkout items in cart', async() => {
-        await expect(Sauce.checkout).click();
-
+        // Adds user's info
         await expect(Sauce.firstName).click();
         await expect(Sauce.firstName).setValue('Bob');
         await expect(Sauce.lastName).click();
