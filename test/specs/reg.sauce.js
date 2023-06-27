@@ -86,6 +86,7 @@ describe('Automate SauceLab Page', async() => {
     });
 
     it('Verify order is complete', async() => {
+        // Verifies user is on the correct page after completing checkout
         await expect(Sauce.checkmark).isDisplayed();
         await expect(Sauce.completeHead).toHaveText('Thank you for your order!');
         await expect(Sauce.completeText).toHaveText('Your order has been dispatched, and will arrive just as fast as the pony can get there!');
