@@ -34,6 +34,58 @@ class SauceDemo {
     get checkout() {
         return $('.checkout_button');
     }
+
+    get firstName() {
+        return $('#first-name');
+    }
+
+    get lastName() {
+        return $('#last-name');
+    }
+
+    get postalCode() {
+        return $('#postal-code');
+    }
+
+    get cont() {
+        return $('.cart-button');
+    }
+
+    itemName(num) {
+        return $(`.inventory_item_name:nth-of-type(${num})`);
+    }
+
+    cardShip(num) {
+        return $(`.summary_value_label:nth-of-type(${num})`);
+    }
+
+    get subTotal() {
+        return $('.summary_subtotal_label');
+    }
+
+    get taxes() {
+        return $('.summary_tax_label');
+    }
+
+    get total() {
+        return $('.summary_total_label');
+    }
+
+    get checkmark() {
+        return $('.pony_express');
+    }
+
+    get completeHead() {
+        return $('.complete-header');
+    }
+
+    get completeText() {
+        return $('.complete-text');
+    }
+
+    get backHome() {
+        return $('#back-to-products');
+    }
 }
 
 const Sauce = new SauceDemo();

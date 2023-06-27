@@ -41,12 +41,48 @@ describe('Automate SauceLab Page', async() => {
         await expect(Sauce.passInput).setValue('secret_sauce');
     });
 
-    it('Add items to cart', async() => {
+    it('Add/remove item(s) to cart', async() => {
+        browser.dismissAlert();
+        browser.pause(3000);
+
         await expect(Sauce.addToCart(1)).click();
-        await expect(Sauce.addToCart(2)).click();
+        await expect(Sauce.addToCart(2)).click()
+        await expect(Sauce.addToCart(3)).click();
         await expect(Sauce.cart).click();
 
-        // remove items from cart
+        // remove item from cart
         await expect(Sauce.removeCart(1)).click();
+    });
+
+    it('Add info and checkout items in cart', async() => {
+        await expect(Sauce.checkout).click();
+
+        await expect(Sauce.firstName).click();
+        await expect(Sauce.firstName).setValue('Bob');
+        await expect(Sauce.lastName).click();
+        await expect(Sauce.lastName).setValue('Builder');
+        await expect(Sauce.postalCode).click();
+        await expect(Sauce.postalCode).setValue('12345');
+        await expect(Sauce.cont).click();
+    });
+
+    it('Verify items and payment info are correct', async() => {
+        await expect(Sauce.itemName(1)).toHaveText('Sauce Labs Bike Light');
+        await expect(Sauce.itemName(2)).toHaveText('Sauce Labs Backpack');
+
+        await expect(Sauce.cardShip(1)).toHaveText('SauceCard #31337');
+        await expect(Sauce.cardShip(2)).toHaveText('Free Pony Express Delivery!');
+
+        await expect(Sauce.subTotal).toHaveText('Item Total: $39.98');
+        await expect(Sauce.taxes).toHaveText('Tax: $3.20');
+
+        await expect(Sauce.total).toHaveText('Total: $43.18');
+    });
+
+    it('Verify order is complete', async() => {
+        await expect(Sauce.checkmark).isDisplayed();
+        await expect(Sauce.completeHead).toHaveText('Thank you for your order!');
+        await expect(Sauce.completeText).toHaveText('Your order has been dispatched, and will arrive just as fast as the pony can get there!');
+        await expect(Sauce.backHome).click();
     });
 });
