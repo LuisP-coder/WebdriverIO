@@ -15,7 +15,7 @@ class SauceDemo {
         return $('.error-message-container');
     }
     
-    get errorClear(){
+    get errorClear() {
         return $('.error-button');
     }
 
@@ -23,7 +23,7 @@ class SauceDemo {
         return $(`.btn_inventory:nth-of-type(${num})`);
     }
 
-    removeCart(num){
+    removeCart(num) {
         return $(`.cart_button:nth-of-type(${num})`);
     }
 
