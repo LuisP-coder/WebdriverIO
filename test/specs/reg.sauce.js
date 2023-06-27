@@ -42,6 +42,7 @@ describe('Automate SauceLab Page', async() => {
     });
 
     it('Add/remove item(s) to cart', async() => {
+        // There is an alert when entering the page
         browser.dismissAlert();
         browser.pause(3000);
 
