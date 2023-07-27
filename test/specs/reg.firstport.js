@@ -26,7 +26,6 @@ describe('Verify first porfolio page', async() => {
             `to learn more and improve my overall skills. I'm hard working, `,
             'curious, committed, and a fast learner!!'
         );
-
         await expect(FirstPort.portrait).toBeDisplayed();
     });
 
