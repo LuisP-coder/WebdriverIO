@@ -22,6 +22,7 @@ describe('Verify Weather App displays correct', () => {
         
         // Verify Humidity is displayed
         await expect(Weather.humidity).isDisplayed();
+        
         // Verify Wind speed is displayed
         await expect(Weather.wind).isDisplayed();
     });
