@@ -1,13 +1,8 @@
 import { Calculator } from '../pageobjects/calculator.page.js';
 
 describe('Verify Calculator Page', async() => {
-    let pageUrl = 'https://luisp-coder.github.io/Calculator/';
-
-    before(async() => {
-        await browser.url(pageUrl);
-    });
-
     it('Verify Addition functionaluty works', async() => {
+        await browser.url('https://luisp-coder.github.io/Calculator/');
         await expect(Calculator.input).toHaveText('0');
         await expect(Calculator.button).selectByAttribute('value','2');
         await Calculator.selectByVisibleText('2');
