@@ -30,6 +30,8 @@ describe('Verify Portfolio Page', () => {
     it('Verify Project Card and text inside', async() => {
         // allure.owner(owner);
         // allure.startStep('Verify Cards are displayed', true);
+
+        // Loops thru all project cards
         for(let i = 0; i < 4; i++) {
             await expect(PortfolioV2.projectCard([i])).isDisplayed();
         }
