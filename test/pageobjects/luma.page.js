@@ -17,4 +17,4 @@ class luma {
 }
 
 const Luma = new luma();
-export { Luma };
+export { Luma }
