@@ -1,7 +1,7 @@
 import Green from '../pageobjects/greenup.page.js';
 
 describe('Verify GreenUp Mock Page', () => {
-    it('Open page', async() => {
+    before('Open page', async() => {
         await browser.url('https://luisp-coder.github.io/GreenUpMock/');
     });
 
