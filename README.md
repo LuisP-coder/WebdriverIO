@@ -1,2 +1,2 @@
 # Automation
-Repo contains my Webdriver.ioAutomation files using Javascript
+Repo contains my Webdriver.io Automation files using Javascript
