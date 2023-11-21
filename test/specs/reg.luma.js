@@ -6,6 +6,7 @@ describe('Verify Luma home page', async() => {
     });
 
     it('Verify text in images are correct', async() => {
+        // Check first white box content
         await expect(Luma.mainImg).isDisplayed();
         await expect(Luma.whiteContent(2)).toHaveText('New Luma Yoga Collection');
 
