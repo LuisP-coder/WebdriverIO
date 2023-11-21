@@ -10,6 +10,7 @@ describe('Verify Luma home page', async() => {
         await expect(Luma.mainImg).isDisplayed();
         await expect(Luma.whiteContent(2)).toHaveText('New Luma Yoga Collection');
 
+        // Check second white box
         await expect(Luma.homePants).isDisplayed();
         await expect(Luma.whiteContent(3)).toHaveText('Luma pants when you shop today');
 
