@@ -11,3 +11,4 @@ describe('WebdriverIO Component Testing', () => {
         await expect($('aria/Hello World!')).not.toBePresent()
     })
 })
+
